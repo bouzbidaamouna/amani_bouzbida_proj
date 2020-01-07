@@ -1,12 +1,17 @@
 ashrae-energy-prediction
 
 **Variable Desicription
+
+
 -Train
+
 building_id - Foreign key for the building metadata.
 meter - The meter id code. Read as {0: electricity, 1: chilledwater, 2: steam, 3: hotwater}. Not every building has all meter types.
 timestamp - When the measurement was taken
 meter_reading - The target variable. Energy consumption in kWh (or equivalent). Note that this is real data with measurement error, which we expect will impose a baseline level of modeling error.
+
 -building_meta
+
 site_id - Foreign key for the weather files.
 building_id - Foreign key for training.csv
 primary_use - Indicator of the primary category of activities for the building based on EnergyStar property type definitions
